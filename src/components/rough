@@ -1,0 +1,95 @@
+<div class='row'>
+    <div class='column'>
+      <div class='blue-column'>
+        Some Text in Column One
+      </div>
+    </div>
+    <div class='column'>
+      <div class='green-column'>
+        Some Text in Column Two
+      </div>
+    </div>
+  </div>
+
+
+
+  ---
+
+
+  .modelS {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.modelS__header {
+  display: flex;
+  position: sticky;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+  padding-top: 15px;
+  background-color: white;
+}
+.modelS__header__logoImg {
+  object-fit: contain;
+  flex: 1;
+  width: 90px;
+  margin-right: 100px;
+}
+.modelS__header__links {
+  display: flex;
+  gap: 15px;
+}
+.modelS__header__links > a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+  font-weight: 500;
+  font-size: 15px;
+}
+.modelS__body {
+  display: flex;
+  align-items: center;
+  flex-basis: 100%;
+  flex: 1;
+}
+.modelS__images {
+  position: fixed;
+  z-index: -1;
+}
+.modelS__images > img {
+  max-width: 500px;
+}
+.modelS__options {
+  padding-right: 10px;
+}
+
+
+
+-------
+<div className="modelS">
+      <div className="modelS__header">
+        <div className="modelS__header__logo">
+          <Link to="/">
+            <img
+              className="modelS__header__logoImg"
+              src="https://assets.website-files.com/5e8fceb1c9af5c3915ec97a0/5ec2f037975ed372da9f6286_Tesla-Logo-PNG-HD.png"
+              alt=""
+            />
+          </Link>
+        </div>
+      </div>
+      <div className="modelS__body">
+        <div className="modelS__images">
+          <img src="https://static-assets.tesla.com/configurator/compositor?&options=$MTS11,$PPSW,$WS90,$IBC00&view=FRONT34&model=ms&size=1920&bkba_opt=1&version=v0028d202105270438&crop=1300,550,300,250&version=v0028d202105270438"></img>
+        </div>
+        <div className="modelS__options">
+          <span>Est. delivery : August-September</span>
+        </div>
+      </div>
+    </div>

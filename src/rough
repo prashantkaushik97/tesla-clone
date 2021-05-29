@@ -1,0 +1,110 @@
+import "./App.css";
+import React, { useEffect, useState } from "react";
+import HeaderBlock from "./components/HeaderBlock";
+import { Controller, Scene } from "react-scrollmagic";
+
+import Header from "./components/Header";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
+import Menu from "./components/Menu";
+function App() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  return (
+    <Router>
+      <div className="App">
+        <Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+        {isMenuOpen && <Menu></Menu>}
+        <div>
+          <Controller globalSceneOptions={{ triggerHook: "onLeave" }}>
+            <Scene pin>
+              <HeaderBlock></HeaderBlock>
+            </Scene>
+            <Scene pin>
+              <HeaderBlock></HeaderBlock>
+            </Scene>
+          </Controller>
+        </div>
+      </div>
+    </Router>
+  );
+}
+
+export default App;
+
+
+
+
+
+----------
+
+
+.header {
+  display: flex;
+  position: sticky;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+  padding-top: 15px;
+}
+.header__logoImg {
+  object-fit: contain;
+  flex: 1;
+  width: 90px;
+  margin-right: 100px;
+}
+.header__links {
+  display: flex;
+  gap: 15px;
+}
+.header__links > a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+  font-weight: 500;
+  font-size: 15px;
+}
+.header__right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.header__right > a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+  font-weight: 500;
+  font-size: 15px;
+  z-index: 0;
+  position: relative;
+}
+.header__menu > .MuiSvgIcon-root {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+.header__link--hidden {
+  visibility: hidden;
+}
+@media (max-width: 768px) {
+  .header {
+    position: fixed;
+    top: 100;
+    background: white;
+    width: 100%;
+    justify-content: baseline;
+  }
+  .header__logoImg {
+    object-fit: contain;
+    flex: 1;
+    width: 90px;
+    margin-right: 10px;
+  }
+}

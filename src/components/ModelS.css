@@ -1,0 +1,151 @@
+.modelS__header {
+  display: flex;
+  position: sticky;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+  padding-top: 15px;
+  background-color: white;
+}
+.modelS__header__logoImg {
+  object-fit: contain;
+  flex: 1;
+  width: 90px;
+  margin-right: 100px;
+}
+.modelS__header__links {
+  display: flex;
+  gap: 15px;
+}
+.modelS__header__links > a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.modelS {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.modelS__body {
+  display: flex;
+  justify-content: space-between;
+  object-fit: contain;
+}
+.modelS__options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
+  position: relative;
+  object-fit: contain;
+  padding-right: 2%;
+}
+.modelS__images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.modelS__images > img {
+  top: 30%;
+  bottom: 30%;
+  right: 0;
+  left: 0;
+  max-width: 900px;
+  position: fixed;
+}
+.modelS__images__price {
+  display: flex;
+  position: fixed;
+  top: 92%;
+  left: 15%;
+  min-width: 600px;
+  background-color: rgb(238, 238, 238);
+  align-items: center;
+  border-radius: 15px;
+  justify-content: space-between;
+}
+.modelS__images__price > span {
+  padding: 30px 30px 30px 30px;
+  margin-bottom: 20px;
+  margin-left: 80px;
+  font-weight: 600;
+  margin-right: 30px;
+}
+.modelS__form {
+  margin-top: 30px;
+}
+.modelS__priceradio {
+  background-color: rgb(240, 240, 240);
+  border-radius: 25px;
+  margin: 10px 10px;
+  padding: 5px 5px;
+  width: auto;
+}
+.modelS__priceradio > label {
+  display: inline-block;
+  width: auto;
+  padding-left: 10px;
+  gap: 50px;
+  border-radius: 25px;
+  transition: all 0.3s;
+  padding: 5px 20px 5px 20px;
+}
+.modelS__priceradio > input[type="radio"] {
+  display: none;
+}
+.modelS__priceradio > input[type="radio"]:checked + label {
+  background-color: white;
+  box-shadow: 0 0 2px #000000, 0 0 1px;
+}
+.modelS__priceradio > input[type="radio"]:hover + label {
+  border: solid 1px darkgray;
+}
+.modelS__summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.modelS__summary__numbers {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 50px;
+}
+.modelS__varientradio {
+  display: flex;
+  flex-direction: column;
+  border-radius: 25px;
+  margin: 10px 0px 10px 0px;
+  padding: 20px 20px;
+  width: auto;
+}
+.modelS__varientradio > input[type="radio"] {
+  display: none;
+}
+.modelS__varientradio > label {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 10px;
+  padding: 10px 10px;
+  border-radius: 25px;
+  padding: 15px 15px;
+  border: solid 1px darkgray;
+
+  font-size: 200;
+}
+.modelS__varientradio > input[type="radio"]:checked + label {
+  background-color: white;
+  box-shadow: 0 0 4px #0e11d8, 0 0 3px;
+}
